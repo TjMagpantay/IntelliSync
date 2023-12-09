@@ -65,6 +65,9 @@ def check_all_messages(message):
     response(long.R_JOKE2, ['give', 'another', 'joke'], required_words=['another', 'joke'])
     response(long.R_HELP, ['please', 'question', 'answer'], required_words=['answer'])
     response(long.R_HELP2, ['please', 'question', 'answer'], required_words=['need', 'help'])
+    response(long.R_QUOTE, ['please', 'give', 'quote'], required_words=['quote'])
+    response(long.R_QUOTE2, ['please', 'give', 'another', 'quote'], required_words=['another','quote'])
+    response(long.R_QUOTE3, ['please', 'another', 'quote'], required_words=['please','quote'])
     response(long.R_PYTHON_BASICS, ['python', 'basics', 'learn', 'variables', 'loops', 'functions'],
              required_words=['python'])
     response(long.R_FAVORITE_LANGUAGE, ['python', 'favorite', 'language'], required_words=['python'])
@@ -101,7 +104,7 @@ print("|Meet Mechamaru, your friendly chatbot buddy here to assist you in this p
       "\n|engage in conversation with you and provide responses based on the input you provide. Whether you have         |"
       "\n|questions, need advice, or just want to chat, feel free to enter your inquiries.                               |")
 print("|                                                                                                               |")
-print("|How to sUse:                                                                                                    |")
+print("|How to Use:                                                                                                    |")
 print("|  1.Enter Your Inquiry: Type your message or question in the input prompt, and Mechamaru will respond          |"
       "\n|  accordingly.                                                                                                 |")
 print("|  2.Terminating the Program: To exit the ChatBot, simply type \"bye\" or \"goodbye\" (case insensitive). This      |"
@@ -110,7 +113,7 @@ print("|________________________________________________________________________
 # Ask the user if they want to use the chat bot
 while True:
     user_decision = input("\nDo you want to use the ChatBot? (yes/no): ").lower()
-    print("****************************************************************************************************************")
+    print("\n****************************************************************************************************************")
     if user_decision == 'yes':
         main_chat()  # Call the main_chat function from main_chatbot.py
         break
